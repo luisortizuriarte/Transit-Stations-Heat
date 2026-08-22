@@ -1,0 +1,94 @@
+# =====================================================================
+# Git Ignore Configuration for Transit-Stations-Heat Public Repository
+# =====================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions & Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual & Conda Environments
+env/
+venv/
+.venv/
+ENV/
+.conda/
+
+# Jupyter Notebooks & Checkpoints
+*.ipynb
+.ipynb_checkpoints/
+
+# Data Files (Rasters, Vectors, Tables)
+*.tif
+*.tiff
+*.TIF
+*.TIFF
+*.geojson
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.csv
+*.parquet
+*.gpkg
+*.qgz
+*.qgs
+*.aux.xml
+
+# Data & Asset Directories
+landsat/
+stitched_city_temperatures/
+city_mean_temperatures/
+metrolocs/
+Network Density/
+NLCD_imperviousFraction/
+blockgroups_geoms/
+nybb_23b/
+uMORPH/
+AGU2025/
+paper/
+scratch/
+cache/
+
+# Image & Presentation Outputs
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.pptx
+*.docx
+*.tmp
+*.html
+
+# Agent, Skill & IDE Internal Directories
+.agents/
+.agent/
+_agents/
+.gemini/
+.idea/
+.vscode/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini

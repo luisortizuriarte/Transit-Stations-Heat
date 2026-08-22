@@ -1,0 +1,365 @@
+
+
+====== Notebook: combine_bg_indicators.ipynb ======
+Text output: array([51, 24, 11, 36, 17])
+Stream output: NY 36
+DC 11
+MD 24
+VA 51
+IL 17
+Text output: <Figure size 1000x1000 with 1 Axes>
+Text output: 0        510131001001
+1        510131001002
+2        510131001003
+3        510131001004
+4        510131002001
+             ...     
+13795    170318447002
+13796    170318447003
+13797    170319800001
+13798    170319801001
+13799    170319900000
+Name: GEOID, Length: 13800, dtype: object
+Text output: name  total_population  \
+0      Block Group 1; Census Tract 1001; Arlington Co...            1447.0   
+1      Block Group 2; Census Tract 1001; Arlington Co...             801.0   
+2      Block Group 3; Census Tract 1001; Arlington Co...            1321.0   
+3      Block Group 4; Census Tract 1001; Arlington Co...            1639.0   
+4      Block Group 1; Census Tract 1002; Arlington Co...            1011.0   
+...                                                  ...               ...   
+13795  Block Group 2; Census Tract 8447; Cook County;...             748.0   
+13796  Block Group 3; Census Tract 8447; Cook County;...             791.0   
+13797  Block Group 1; Census Tract 9800; Cook County;...               0.0   
+13798  Block Group 1; Census Tract 9801; Cook County;...               0.0   
+13799  Block Group 0; Census Tract 9900; Cook County;...               0.0   
+
+       population_over_65  median_household_income  state  county   tract  \
+0                   126.0             
+Stream output: Join complete. Displaying the first few rows of the final GeoDataFrame:
+Text output: <Figure size 2000x1000 with 2 Axes>
+
+
+====== Notebook: combine_lst.ipynb ======
+Stream output: Found files: NYC=13, Chicago=20, DC=16
+Stream output: Processing cities...
+Stream output: c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dt
+Stream output: NYC: 13 files, 13,411,018 pixels, 34.5°C mean
+Stream output: c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dt
+Stream output: Chicago: 20 files, 38,891,675 pixels, 31.9°C mean
+Stream output: c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dt
+Stream output: DC: 16 files, 41,737,805 pixels, 35.4°C mean
+Complete! Processed 3 cities.
+Markdown discussing results: ---  ## 6. Visualize Mean Surface Temperatures  Create a three-panel figure displaying the mean surface temperature distribution for each city. The visualization uses:  - **Projection**: Plate Carrée (equirectangular) for geographic coordinates - **Color scheme**: Red-Yellow-Blue reversed (hot to cold) with standardized temperature range (15-55°C) - **Layout**: Horizontal arrangement facilitating inter-city comparison - **Colorbar**: Unified scale across all panels for quantitative comparison  T...
+
+
+====== Notebook: download_acs.ipynb ======
+Stream output: --- Starting Data Fetch for Specified Counties ---
+  Fetching data for: Arlington County, VA
+  Fetching data for: Fairfax County, VA
+  Fetching data for: Fairfax County, VA
+  Fetching data for: Alexandria City, VA
+  Fetching data for: Alexandria City, VA
+  Fetching data for: Loudoun County, VA
+  Fetching data for: Loudoun County, VA
+  Fetching data for: Montgomery County, MD
+  Fetching data for: Montgomery County, MD
+  Fetching data for: Prince George's County, MD
+  Fetching data for: Prince George's County, MD
+  Fetching data for: Washington, D.C.
+  Fetching data for: Washington, D.C.
+  Fetching data for: New York County (Manhattan), NY
+  Fetching data for: New York County (Manhattan), NY
+  Fetching data for: Bronx County, NY
+  Fetching data for: Bronx County, NY
+  Fetching data for: Kings County (Brooklyn), NY
+  Fetching data for: Kings County (Brooklyn), NY
+  Fetching data for: Queens County, NY
+  Fetching data for: Queens County, NY
+  Fetching data for: Richmond County (Staten Isla
+Stream output: --- All counties processed. Combining data... ---
+
+✅ Success!b All data saved to selected_counties_block_group_data.csv
+Total block groups processed: 13800
+Text output: 12
+Text output: 12
+
+
+====== Notebook: explore_qa.ipynb ======
+Text output: <matplotlib.collections.QuadMesh at 0x1d7f9f57380>
+Text output: <Figure size 640x480 with 2 Axes>
+Stream output: QA pixel value statistics:
+Min: 21762.0
+Max: 56916.0
+Shape: (1, 5000, 5000)
+
+Number of unique QA values: 25
+Sample QA values: [21762. 21824. 21890. 21952. 22018. 22080. 22146. 22208. 22280. 23826.
+ 23888. 24082. 24144. 29986. 54534. 54596. 54662. 54724. 54790. 54852.]
+Stream output: c:\Users\lortizur\AppData\Local\miniforge-pypy3\envs\climdata\Lib\site-packages\xarray\core\duck_array_ops.py:251: RuntimeWarning: invalid value encountered in cast
+  return data.astype(dtype, **kwargs)
+Stream output: Total pixels: 25,000,000
+Clear, non-water pixels: 13,974,490
+Percentage clear: 55.90%
+Text output: <Figure size 1500x600 with 4 Axes>
+Stream output: To apply this mask to other Landsat data (e.g., surface temperature):
+masked_data = surface_temp.where(clear_mask)
+
+The mask can also be used to:
+- Filter out cloudy, shadowed, snowy, or water pixels
+- Calculate statistics only for clear land pixels
+- Ensure data quality for analysis
+Stream output: Original surface temperature data shape: (1, 5000, 5000)
+Temperature range (Celsius): -4.0°C to 65.3°C
+Masked temperature range (Celsius): -2.4°C to 65.0°C
+Valid temperature pixels after masking: 13,853,105
+Text output: <Figure size 1500x1200 with 7 Axes>
+Stream output: === SURFACE TEMPERATURE ANALYSIS WITH QA MASKING ===
+
+📊 Temperature Statistics (Clear Land Pixels Only):
+   Mean temperature: 36.2°C
+   Median temperature: 36.0°C
+   Standard deviation: 5.3°C
+   Min temperature: -2.4°C
+   Max temperature: 65.0°C
+   25th percentile: 32.1°C
+   75th percentile: 39.9°C
+
+🔍 Data Quality Assessment:
+   Total pixels: 25,000,000
+   Clear land pixels: 13,853,105
+   Data availability: 55.4%
+   Masked out pixels: 11,146,895
+
+🔥 Heat Analysis:
+   Hot spot threshold (90th percentile): 43.3°C
+   Number of hot spot pixels: 1,383,813
+   Percentage of clear area in hot spots: 10.0%
+
+🌡️  Temperature Category Distribution:
+   Cool (0-15°C): 604 pixels (0.0%)
+   Moderate (15-25°C): 33,180 pixels (0.2%)
+   Warm (25-35°C): 5,980,784 pixels (43.2%)
+   Hot (35-45°C): 7,047,876 pixels (50.9%)
+   Very Hot (45°C+): 790,643 pixels (5.7%)
+
+💡 Usage Examples:
+   # Save the masked temperature data
+   masked_st_celsius.rio.to_raster('masked_surface_temperature.tif')
+   
+   # Calculate m
+
+
+====== Notebook: lst_urbanparameters.ipynb ======
+Stream output: Walksheds Columns: ['city', 'station_id', 'station_na', 'station_lo', 'station_la', 'original_c', 'output_crs', 'walk_time_', 'walk_speed', 'area_km2', 'STATION__1', 'ADA', 'PKNRD', 'POINT_X', 'POINT_Y', 'FID_1', 'station__2', 'D3A', 'D3AAO', 'D3AMM', 'D3APO', 'D3B', 'D3BAO', 'D3BMM3', 'D3BMM4', 'D3BPO3', 'D3BPO4', 'geometry']
+Text output: city  station_id     station_na  station_lo  station_la  original_c  \
+0  Chicago           1     Cumberland  -87.838022   41.984293  EPSG:32616   
+1  Chicago           2  Oak Park-Lake  -87.793780   41.886986  EPSG:32616   
+2  Chicago           3    Austin-Lake  -87.774132   41.887292  EPSG:32616   
+3  Chicago           4   Ashland-Lake  -87.666948   41.885310  EPSG:32616   
+4  Chicago           5   Clinton-Lake  -87.641768   41.885702  EPSG:32616   
+
+  output_crs  walk_time_  walk_speed  area_km2  ...     D3AAO      D3AMM  \
+0  EPSG:4326          10        1.25  0.638851  ...  4.031365   2.967934   
+1  EPSG:4326          10        1.25  1.098641  ...  0.000000   0.976514   
+2  EPSG:4326          10        1.25  1.109241  ...  0.000000   7.741518   
+3  EPSG:4326          10        1.25  1.170590  ...  0.048593   7.223372   
+4  EPSG:4326          10        1.25  1.077267  ...  5.999149  14.961109   
+
+       D3APO         D3B      D3BAO     D3BMM3     D3BMM4      D3BPO3  \
+0  15.263227 
+Stream output: Extracting mean building height...
+Extracting plan area fraction...
+Text output: station_na  mean_building_height  plan_area_fraction
+0     Cumberland              9.566667            0.211670
+1  Oak Park-Lake              6.878063            0.262446
+2    Austin-Lake              8.170087            0.235240
+3   Ashland-Lake             10.437500            0.321171
+4   Clinton-Lake             44.424999            0.380415
+Stream output: Processing NYC...
+NYC background mean LST: 34.51
+Processing Chicago...
+Chicago background mean LST: 31.94
+Processing DC...
+DC background mean LST: 35.44
+Text output: city            station_na  median_lst  lst_anomaly
+0  NYC  Astoria-Ditmars Blvd   41.419231     6.906635
+1  NYC          Astoria Blvd   40.991646     6.479050
+2  NYC                 30 Av   41.172119     6.659523
+3  NYC              Broadway   41.161865     6.649269
+4  NYC                 36 Av   42.005424     7.492828
+Stream output: Extracting NLCD for NYC...
+Extracting NLCD for Chicago...
+Extracting NLCD for DC...
+Text output: city            station_na impervious_fraction
+0  NYC  Astoria-Ditmars Blvd           83.410859
+1  NYC          Astoria Blvd           83.866939
+2  NYC                 30 Av            84.83941
+3  NYC              Broadway           83.469338
+4  NYC                 36 Av           82.888254
+Text output: <Figure size 1800x900 with 15 Axes>
+
+
+====== Notebook: metro_locations_analysis.ipynb ======
+Stream output: C:\Users\lortizur\AppData\Local\Temp\ipykernel_29568\2889038785.py:1: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  top10_by_city = gdf.groupby('city').apply(lambda x: x.nlargest(10, 'median_temp')).reset_index(drop=True)
+Text output: city                             station_name  median_temp
+0   Chicago                           Pulaski-Midway    40.263603
+1   Chicago                            Kedzie-Midway    40.195244
+2   Chicago                           Midway Airport    39.685963
+3   Chicago                           Cicero-Douglas    39.569061
+4   Chicago                              54th/Cermak    39.522583
+5   Chicago                          Western-Douglas    39.401588
+6   Chicago                                    Damen    39.279907
+7   Chicago                                     18th    39.039284
+8   Chicago                           Western-Midway    39.029175
+9   Chicago                               Cumberland    38.711823
+10       DC                                 Pentagon    49.631020
+11       DC  Washington Dulles International Airport    49.346779
+12       DC               Rhode Island Ave-Brentwood    49.263931
+13       DC                              Spring Hill    48.655525
+14       DC      
+Text output: <Figure size 1800x600 with 3 Axes>
+Stream output: C:\Users\lortizur\AppData\Local\Temp\ipykernel_29568\2656641077.py:34: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+Text output: <Figure size 1800x600 with 4 Axes>
+Text output: <Axes: >
+Text output: <Figure size 640x480 with 1 Axes>
+
+
+====== Notebook: plot_lst.ipynb ======
+Stream output: Dashboard creation is a placeholder.
+Stream output: Analyzing NYC LST anomalies & calculating zonal stats...
+Error processing Plan Area Fraction for NYC: Unable to allocate 23.0 GiB for an array with shape (58157, 106081) and data type float32
+Error processing Mean Building Height (m) for NYC: Unable to allocate 23.0 GiB for an array with shape (58157, 106081) and data type float32
+Analyzing Chicago LST anomalies & calculating zonal stats...
+Error output: KeyboardInterrupt: 
+Text output: <Figure size 1800x1800 with 9 Axes>
+Stream output: Computed 481 medians for NYC
+[41.41923141479492, 40.99164581298828, 41.172119140625, 41.161865234375, 42.00542449951172]
+Text output: <Figure size 1000x1000 with 2 Axes>
+Text output: <Figure size 2000x600 with 6 Axes>
+Text output: <Figure size 1800x1000 with 6 Axes>
+Text output: np.float32(0.0007311414)
+
+
+====== Notebook: subset_lst.ipynb ======
+Stream output: Processing NYC...
+Saved subset for NYC to stitched_city_temperatures/NYC_subset_surface_temperature.tif
+Processing DC...
+Saved subset for NYC to stitched_city_temperatures/NYC_subset_surface_temperature.tif
+Processing DC...
+Saved subset for DC to stitched_city_temperatures/DC_subset_surface_temperature.tif
+Processing Chicago...
+Saved subset for Chicago to stitched_city_temperatures/Chicago_subset_surface_temperature.tif
+Saved subset for DC to stitched_city_temperatures/DC_subset_surface_temperature.tif
+Processing Chicago...
+Saved subset for Chicago to stitched_city_temperatures/Chicago_subset_surface_temperature.tif
+Text output: <Figure size 1100x400 with 4 Axes>
+
+
+====== Notebook: test_tile_combine.ipynb ======
+Stream output: 🚀 Starting multi-tile surface temperature processing...
+============================================================
+
+🏙️  Processing NYC...
+  Found 26 relevant files
+  Found 1 tiles: ['029007']
+    Processing tile 029007...
+      ST files: 13
+      QA files: 13
+      ✅ LC08_CU_029007_20240601_20240615_02_ST_B10.TIF: 267,420/25,000,000 valid pixels (1.1%)
+      ✅ LC08_CU_029007_20240601_20240615_02_ST_B10.TIF: 267,420/25,000,000 valid pixels (1.1%)
+      ✅ LC08_CU_029007_20240617_20240709_02_ST_B10.TIF: 220,695/25,000,000 valid pixels (0.9%)
+      ✅ LC08_CU_029007_20240617_20240709_02_ST_B10.TIF: 220,695/25,000,000 valid pixels (0.9%)
+      ✅ LC08_CU_029007_20240703_20240715_02_ST_B10.TIF: 229,644/25,000,000 valid pixels (0.9%)
+      ✅ LC08_CU_029007_20240703_20240715_02_ST_B10.TIF: 229,644/25,000,000 valid pixels (0.9%)
+      ✅ LC08_CU_029007_20240717_20240926_02_ST_B10.TIF: 8,965,622/25,000,000 valid pixels (35.9%)
+      ✅ LC08_CU_029007_20240717_20240926_02_ST_B10.TIF: 8,965,622/25,0
+Stream output: 📊 Creating visualization for 3 cities...
+Temperature range across all cities: -41.0°C to 75.0°C
+Text output: <Figure size 1800x600 with 4 Axes>
+Stream output: \n📈 City Temperature Comparison:
+   NYC     :  34.5°C ±  5.3°C | Coverage:  53.6% | Pixels: 13,411,018
+   NYC     :  34.5°C ±  5.3°C | Coverage:  53.6% | Pixels: 13,411,018
+   Chicago :  31.9°C ±  3.3°C | Coverage:  77.8% | Pixels: 38,891,675
+   Chicago :  31.9°C ±  3.3°C | Coverage:  77.8% | Pixels: 38,891,675
+   DC      :  35.4°C ±  4.3°C | Coverage:  83.5% | Pixels: 41,737,805
+   DC      :  35.4°C ±  4.3°C | Coverage:  83.5% | Pixels: 41,737,805
+
+
+====== Notebook: walkshed_analysis_st.ipynb ======
+Stream output: Chicago: 144 stations selected for analysis
+DC: 98 stations selected for analysis
+NYC: 496 stations selected for analysis
+
+Total stations across all cities: 738
+Stream output: Calculating walksheds for Chicago...
+Stream output: Calculating walksheds: 100%|██████████| 144/144 [02:47<00:00,  1.16s/it]
+Stream output: Calculating walksheds for DC...
+Stream output: Calculating walksheds: 100%|██████████| 98/98 [02:36<00:00,  1.60s/it]
+Stream output: Calculating walksheds for NYC...
+Stream output: Calculating walksheds: 100%|██████████| 496/496 [07:30<00:00,  1.10it/s]
+Stream output: 💾 Saving all walksheds to GeoJSON file...
+   Processing Chicago: 144 walksheds in CRS EPSG:32616
+   Processing DC: 98 walksheds in CRS EPSG:32618
+   Processing NYC: 496 walksheds in CRS EPSG:32618
+
+📊 Walkshed Summary:
+   Total walksheds: 738
+   Cities included: ['Chicago', 'DC', 'NYC']
+   Stations per city: {'Chicago': 144, 'DC': 98, 'NYC': 496}
+   Average walkshed area: 1.00 km²
+   Total walkshed area: 734.34 km²
+
+✅ Successfully saved all walksheds to: all_walksheds_10min.geojson
+   File contains 738 walkshed polygons
+   Coordinate Reference System: EPSG:4326
+   Columns included: ['city', 'station_id', 'station_name', 'geometry', 'station_lon', 'station_lat', 'original_crs', 'output_crs', 'walk_time_minutes', 'walk_speed_mps', 'area_km2', 'STATION_ID', 'LONGNAME', 'LINES', 'ADDRESS', 'ADA', 'PKNRD', 'POINT_X', 'POINT_Y', 'NAME', 'LINE', 'TRAININFO_URL', 'WEB_URL', 'GIS_ID', 'MAR_ID', 'GLOBALID', 'OBJECTID', 'CREATOR', 'CREATED', 'EDITOR', 'EDITED', 'SE_ANNO_CAD_DATA', 'north_direction
+Text output: <Figure size 2000x1000 with 3 Axes>
+Text output: <Figure size 2000x1000 with 3 Axes>
+Stream output: Processing temperature statistics for Chicago...
+Processing temperature statistics for DC...
+Processing temperature statistics for NYC...
+
+Created GeoDataFrame with 738 stations
+
+Columns in the GeoDataFrame:
+['city', 'station_name', 'geometry', 'median_temp', 'temp_10th', 'temp_25th', 'temp_75th', 'temp_90th', 'temp_99th', 'STATION_ID', 'LONGNAME', 'LINES', 'ADDRESS', 'ADA', 'PKNRD', 'POINT_X', 'POINT_Y', 'NAME', 'LINE', 'TRAININFO_URL', 'WEB_URL', 'GIS_ID', 'MAR_ID', 'GLOBALID', 'OBJECTID', 'CREATOR', 'CREATED', 'EDITOR', 'EDITED', 'SE_ANNO_CAD_DATA', 'station_id', 'north_direction_label', 'line', 'daytime_routes', 'complex_id', 'division', 'ada_southbound', 'gtfs_stop_id', 'structure', 'ada_notes', 'stop_name', 'gtfs_longitude', 'ada_northbound', 'ada', 'south_direction_label', 'cbd', 'borough', 'gtfs_latitude']
+
+First few rows:
+      city   station_name                          geometry  median_temp  \
+0  Chicago     Cumberland  POINT (-9778083.913 5158626.905)    38.711823   
+1  Ch
+Stream output: 🗺️ Creating interactive station temperature map...
+Text output: <folium.folium.Map at 0x15589be7230>
+Stream output: Fetching network for NYC station...
+Fetching network for DC station...
+Fetching network for Chicago station...
+Text output: <Figure size 1200x400 with 4 Axes>
